@@ -1,7 +1,6 @@
 <script setup>
-
 </script>
 
 <template>
-    <router-link to="/users">aa</router-link>
+    <router-link :to="{name: 'users.index'}">go users</router-link>
 </template>

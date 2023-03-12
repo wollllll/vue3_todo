@@ -7,10 +7,12 @@ export const router = createRouter({
     routes: [
         {
             path: '/',
+            name: 'top',
             component: Top
         },
         {
             path: '/users',
+            name: 'users.index',
             component: UsersByIndex
         }
     ]
