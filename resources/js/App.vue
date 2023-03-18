@@ -1,16 +1,17 @@
 <script setup>
-import Loading from "@/components/Loading.vue";
-import {computed} from "vue";
+import {useStoreAuth} from "@/store/auth";
+import {storeToRefs} from "pinia";
 
-// axios.get("api/users")
-//     .then(response => {
-//         store.dispatch("setUser", response.data.user)
-//     })
+const storeAuth = useStoreAuth();
+const { setAuth } = storeAuth;
 
-// const isLoading = computed(() => store.getters["isLoading"])
+axios.get("api/users")
+    .then(response => {
+        setAuth(response.data.users[0])
+    })
 </script>
 
 <template>
     <router-view />
-    <Loading v-if="true"/>
+<!--    <Loading v-if="is_loading"/>-->
 </template>

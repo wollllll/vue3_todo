@@ -1,11 +1,19 @@
 <script setup>
+import { useStoreAuth } from '@/store/auth';
+import {storeToRefs} from "pinia";
+import Footer from "@/components/Footer.vue";
+
+const storeAuth = useStoreAuth();
+const { auth } = storeToRefs(storeAuth);
 </script>
 
 <template>
-    <router-link :to="{name: 'top'}">go top</router-link>
-<!--    <p>{{ user.name }}</p>-->
-<!--    <hr/>-->
-<!--    <ul>-->
-<!--        <li :key="user.id" v-for="user in users">{{ user.name }}</li>-->
-<!--    </ul>-->
+    <h1>Pinia入門</h1>
+    <div>
+        <router-link :to="{name: 'top'}">go top</router-link>
+    </div>
+    <div>
+        {{ auth.name }}
+    </div>
+    <Footer />
 </template>

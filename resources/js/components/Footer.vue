@@ -1,0 +1,4 @@
+<template>
+    footer
+    <component />
+</template>
