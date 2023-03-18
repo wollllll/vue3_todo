@@ -12,8 +12,6 @@ const { auth } = storeToRefs(storeAuth);
     <div>
          <router-link :to="{name: 'users.index'}">go users</router-link>
     </div>
-    <div>
-        {{ auth.name }}
-    </div>
+    <button class="btn">Button</button>
     <Footer user="test"/>
 </template>
