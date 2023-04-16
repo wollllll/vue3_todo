@@ -4,10 +4,10 @@ import Footer from "@/layouts/Footer.vue";
 </script>
 
 <template>
-    <div class="antialiased bg-white">
+    <div class="antialiased">
         <div class="md:w-3/5 mx-auto">
             <Header />
-            <main class="h-screen bg-base-content">
+            <main class="h-screen p-6">
                 <slot />
             </main>
             <Footer />

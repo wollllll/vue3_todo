@@ -8,7 +8,7 @@
 
 <template>
     <Base>
-        <div class="p-6 grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-4 gap-4">
             <div v-for="card in 10" class="card bg-base-100 shadow-md">
                 <div class="card-body p-3">
                     <p>adwadawdw</p>

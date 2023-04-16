@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->get('/user', function () {
+    // ロード画面の確認のためわざと遅延
+    sleep(3);
+
+    return response()->json(['auth' => auth()->user()]);
 });

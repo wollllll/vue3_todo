@@ -1,4 +1,9 @@
 <script setup>
+import {useStoreAuth} from "@/store/auth";
+import {storeToRefs} from "pinia";
+
+const storeAuth = useStoreAuth();
+const {auth} = storeToRefs(storeAuth)
 const appName = import.meta.env.VITE_APP_NAME
 </script>
 
@@ -6,7 +11,7 @@ const appName = import.meta.env.VITE_APP_NAME
     <header>
         <div class="navbar bg-base-300">
             <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">{{ appName }}</a>
+                <a class="btn btn-ghost normal-case text-xl">{{ auth.name }}のmemo</a>
             </div>
             <div class="flex-none gap-2">
                 <div class="form-control">

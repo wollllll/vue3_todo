@@ -5,9 +5,6 @@ export const useStoreAuth = defineStore('auth', {
     actions: {
         setAuth(auth) {
             this.auth = auth
-        },
-        setUser(user) {
-            this.user = user
         }
     },
 });
