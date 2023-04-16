@@ -13,7 +13,7 @@
                 <div class="card-body p-3">
                     <p>adwadawdw</p>
                     <div class="card-actions justify-end">
-                        <button class="btn btn-ghost btn-sm">完了</button>
+                        <button class="btn btn-ghost btn-sm">完d了</button>
                     </div>
                 </div>
             </div>

@@ -17,10 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('users', function () {
-    return response()->json(['users' => \App\Models\User::take(100)->get()]);
-});
-Route::get('users/large', function () {
-    return response()->json(['users' => \App\Models\User::take(50000)->get()]);
-});
